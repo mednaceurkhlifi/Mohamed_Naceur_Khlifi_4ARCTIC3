@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Getter @Setter
@@ -22,4 +23,6 @@ public class Piste implements Serializable {
     private Color color;
     private int length;
     private int slope;
+    @ManyToMany(mappedBy = "pistes")
+    private Set<Skier> skiers;
 }

@@ -6,21 +6,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.io.Serializable;
-import java.time.LocalDate;
-import java.util.Set;
 
 @Entity
 @Getter @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Instructor implements Serializable {
+public class Registration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long numInstructor;
-    private String firstName;
-    private String lastName;
-    private LocalDate dateOfHire;
-    @ManyToMany
-    Set<Course> courses;
+    private Long numRegistration;
+    private int numWeek;
+    @ManyToOne
+    private Skier skier;
+    @ManyToOne
+    private Course course;
 }

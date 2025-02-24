@@ -5,6 +5,8 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.io.Serializable;
+import java.rmi.registry.Registry;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -26,4 +28,7 @@ public class Course implements Serializable {
     private Support support;
     private float price;
     private int timeSlot;
+    @OneToMany(mappedBy = "course")
+    private Set<Registration> registrations;
+
 }
