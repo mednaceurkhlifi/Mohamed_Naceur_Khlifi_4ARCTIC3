@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import tn.esprit.mohamed_naceur_khlifi_4arctic3.entities.enums.TypeSubscription;
 
 import java.io.Serializable;
 import java.time.LocalDate;

@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface SkierRepository extends JpaRepository<Skier, Long> {
 
-
+    List<Skier> findSkierByFirstNameAndLastName(String firstName, String lastName);
 }
