@@ -38,4 +38,9 @@ public class InstructorController {
     public List<Instructor> getAllInstructors() {
         return instructorService.getAllInstructors();
     }
+
+    @PostMapping("/add/course/{numCourse}")
+    public Instructor addInstructorAndAssignToCourse(@RequestBody Instructor instructor, @PathVariable Long numCourse) {
+        return instructorService.addInstructorAndAssignToCourse(instructor, numCourse);
+    }
 } 

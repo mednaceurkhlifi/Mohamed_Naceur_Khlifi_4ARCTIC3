@@ -38,4 +38,9 @@ public class SkierController {
     public List<Skier> getAllSkiers() {
         return skierService.getAllSkiers();
     }
+
+    @PutMapping("/assign/{numSkier}/piste/{numPiste}")
+    public Skier assignSkierToPiste(@PathVariable Long numSkier, @PathVariable Long numPiste) {
+        return skierService.assignSkierToPiste(numSkier, numPiste);
+    }
 } 
